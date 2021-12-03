@@ -76,9 +76,9 @@ app.get('/add', function(req, res) {
     console.log('insert here');
     var sql = 'INSERT INTO TODO_LIST (name,done) VALUES (?,?)'
     var param = [req.query.name, 'N'];
-    connection.query(sql,param, (error, rows) => {
+    connection.query(sql, param, (error, rows) => {
         if (error) throw error;
-        // res.send(rows);
+        res.send(rows);
       });
     // INSERT INTO customers (name, address) VALUES ('Company Inc', 'Highway 37')
   });
